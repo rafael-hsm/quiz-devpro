@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('perguntas/<int:indice>', views.perguntas),
-    path('classificacao/', views.ranking),
+    path('classificacao/', views.classificacao),
 ]

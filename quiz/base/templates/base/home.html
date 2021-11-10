@@ -13,10 +13,9 @@
             <p class="subtitle-quiz">Quiz</p>
             <p class="subtitle-page">Dev Pro</p>
             <div class="form">
-                <p>
-                    Erros:
-                    {{ formulario.errors }}
-                </p>
+                {% if formulario.errors %}
+                    <p>Erros: {{ formulario.errors }}</p>
+                {% endif %}
                 <form class="login-form" method="post" action="/">
                     {% csrf_token %}
                   <input type="text" name="nome" placeholder="NOME" value="{{formulario.nome.value}}"/>
